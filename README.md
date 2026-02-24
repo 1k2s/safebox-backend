@@ -10,8 +10,6 @@ SafeBox é um sistema para gerenciamento de armários inteligentes (lockers) em 
 
 A comunicação com os lockers físicos ocorre via protocolo **MQTT** sobre TLS, tornando o sistema um ponto de integração entre uma API REST convencional e dispositivos IoT em tempo real.
 
----
-
 ## Arquitetura e Design
 
 O projeto segue uma arquitetura **monolítica por camadas**, organizada por domínio de negócio. Cada domínio possui seu próprio conjunto de entidades, repositórios, serviços e controllers:
@@ -51,8 +49,6 @@ com.senai.safebox
 **Separação de responsabilidades:** cada camada tem fronteira clara. O `Controller` apenas delega ao `Service`, que orquestra a lógica de negócio e aciona o `Repository` (Spring Data JPA). DTOs são usados nas bordas da API, nunca expondo entidades diretamente no payload de criação.
 
 **Projeções tipadas:** em vez de buscar entidades completas com joins implícitos, o sistema usa **record-based projections** (`LockerDashboardProjection`, `ReserveDetailsProjection`) construídas via JPQL, evitando over-fetching e expondo exatamente o shape necessário para cada contexto de leitura.
-
----
 
 ##  Principais Fluxos
 
