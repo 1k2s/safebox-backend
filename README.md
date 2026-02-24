@@ -1,6 +1,6 @@
-# SafeBox — Smart Locker Management System
+> ### ⚠️ **Este projeto ainda está em desenvolvimento.** Funcionalidades, estruturas e documentação estão sujeitas a alterações.
 
-> ⚠️ **Este projeto ainda está em desenvolvimento.** Funcionalidades, estruturas e documentação estão sujeitas a alterações.
+# SafeBox — Smart Locker Management System
 
 ## Visão Geral
 
